@@ -1,0 +1,121 @@
+body{
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	line-height: 1.6;
+	background: linear-gradient(90deg,  #ffffff, #ece9e6);
+}
+main{
+
+}
+section{
+
+}
+header{
+	text-align: Center;
+	font-size: 2em;
+	color: black;
+	font-weight: thin;
+}
+nav{
+
+}
+p{
+
+}
+code{
+	color: red;
+	background-color: #f2fdff;
+	font-size: 12pt;
+}
+li{
+
+}
+a{
+	
+}
+.header1 strong{
+	font-size:1.3em;
+}
+section li{
+	margin: 15px 0px 0px 20px;
+}
+
+section header{
+	font-family: 'Times New Roman', sans-serif;
+	background-color: #bdfff3;
+}
+.main-section{
+
+}
+.nav-link{
+	font-family: Garamond, serif;
+}
+.code{
+	position: relative;
+	background-color: white;
+	margin: 10px;
+	border-left: 2px solid;
+	border-color: blue;
+}
+.example{
+	background-color: lightgray;
+}
+
+#main-doc{
+	position: absolute;
+	margin-left: 330px;
+}
+#main-doc header{
+	text-align: left;
+	margin: 0px;
+}
+#navbar{
+	position: fixed;
+	min-width: 300px;
+	width: 320px;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	border-right: 2px solid;
+	border-color: gray;
+}
+#navbar ul{
+	height: 90%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#navbar li{
+	border-top: 1px solid;
+	list-style: none;
+	position: relative;
+	width: 100%;
+	font-size: 1.5em;
+}
+#navbar a{
+	display: block;
+	padding: 20px 20px;
+	cursor: pointer;
+	text-decoration: none;
+}
+@media (max-width: 800px){
+	#navbar{
+		position: absolute;
+		width: 100%;
+		margin:0px;
+		padding: 0px;
+		max-height: 260px;
+		left: 0px;
+	}
+	#navbar ul{
+		text-align: center;
+		border-bottom: 2px solid;
+
+	}
+	#navbar li{
+		border-width: 100%;
+		border-color:green;
+	}
+	#main-doc{
+		position: relative;
+		margin: 310px 5px 5px 5px;
+	}
+}

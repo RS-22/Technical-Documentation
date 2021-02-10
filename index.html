@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Technical Documentation</title>
+</head>
+<body>
+	<nav id="navbar">
+		<header>
+			Java OOP Concepts
+		</header>
+		<ul>
+			<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+			<li><a href="#Classes_and_Objects" class="nav-link">Classes and Objects</a></li>
+			<li><a href="#Create_a_Class" class="nav-link">Create a Class</a></li>
+			<li><a href="#Create_an_Object" class="nav-link">Create an Object</a></li>
+			<li><a href="#Inheritance" class="nav-link">Inheritance</a></li>
+			<li><a href="#Polymorphism" class="nav-link">Polymorphism</a></li>
+			<li><a href="#Abstraction" class="nav-link">Abstraction</a></li>
+			<li><a href="#Encapsulation" class="nav-link">Encapsulation</a></li>
+			<li><a href="#Other_Terms" class="nav-link">Other Terms</a></li>
+			<li><a href="#References" class="nav-link">References</a></li>
+		</ul>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Introduction">
+			<header id="Introduction">
+				Introduction
+			</header>
+			<p>
+				OOP stands for Object-Oriented Programming. It is a methodology or paradigm to design a program using classess and objects. It simplifies software development and maintenance by providing some concepts:
+				<ul>
+					<li>Object</li>
+					<li>Class</li>
+					<li>Inheritance</li>
+					<li>Polymorphism</li>
+					<li>Abstraction</li>
+					<li>Encapsulation</li>
+				</ul>
+			</p>
+			<p>
+				Apart from these concepts, there are some other terms which are used in Object-Oriented design:
+				<ul>
+					<li>Coupling</li>
+					<li>Cohesion</li>
+					<li>Association</li>
+					<li>Aggregation</li>
+					<li>Composition</li>
+				</ul>
+			</p>
+			<p>
+				Why use object-oriented programming design? Object-oriented programming has several advantages over procedural programming:
+				<ul>
+					<li>OOP is faster and easier to execute</li>
+					<li>OOP provides a clear structure for the programs</li>
+					<li>OOP helps to keep the JAVA code DRY "Don't Repeat Yourself" and makes the code easier to maintain, modify and debug</li>
+					<li>OOP makes it possible to create full reusable applications with less code and shorter development time</li>
+				</ul>
+			</p>
+		</section>
+
+		<section class="main-section" id="Classes_and_Objects">
+			<header>
+				Classes and Objects
+			</header>
+			<strong class="header1">Object</strong>
+			<p>
+				An object can be defined as an instance of a class. It can be physical or logical. An object contains an address and takes up some space in memory. An object has three characteristics:
+				<ul>
+					<li><strong>State: </strong>represents the data (value) of an object.</li>
+					<li><strong>Behavior: </strong>represents the behavior (functionality) of an object such as deposit, withdraw etc.</li>
+					<li><strong>Identity: </strong>An object identity is typically implemented via a unique ID. The value of the ID is not visible to the external user. However, it is used internally by the JVM to identify each object uniquely.</li>
+				</ul>
+			</p>
+			<strong class="header1">Class</strong>
+			<p> A class is a collection or group of objects which have common properties. It is a logical entity and can't be physical.</p>
+		</section>
+
+		<section class="main-section" id="Create_a_Class">
+			<header>
+				Create a Class
+			</header>
+			<p>To create a class, use the keyword <code>class</code>:<br> For example: </p>
+			<div class="example">
+				<strong>Main.java</strong><br>
+				Create a class named "<code>Main</code>" with a variable x:
+			<div class="code"><pre>
+	public class Main {
+		int x = 5;
+	}
+			</pre>
+			</div><br>
+			</div>
+			<p>
+			Remember that a class should always start with an uppercase first letter, and that the name of the jave file should match the class name.
+			</p>
+		</section>
+
+		<section class="main-section" id="Create_an_Object">
+			<header>
+				Create an Object
+			</header>
+			<p>In Java, an object is created from a class. We have already created the class named <code>MyClass</code>, so now we can use this to create objects.<br><br>
+			To create an object of <code>MyClass</code>, specify the class name, followed by the object name, and use the keyword <code>new</code>:</p>
+			<div class="example">
+				<strong>Example</strong><br>
+				Create an object called "<code>myObj</code>" and print the value of x:
+				<div class="code">
+					<pre>
+	public class <code>Main</code> {
+	int x = 5;
+
+		public static void <code>main</code>(<code>String</code>[] args) {
+			<code>Main</code> myObj = new <code>Main</code>();
+			<code>System</code>.out.<code>println</code>(myObj.x);
+		}
+	}
+					</pre>
+				</div><br>
+			</div><br>
+		</section>
+
+		<section class="main-section" id="Inheritance">
+			<header>
+				Inheritance
+			</header>
+			<p>
+				In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:<br>
+				<ul>
+					<li><strong>subclass</strong> (child) - the class that inherits from another class</li>
+					<li><strong>superclass</strong> (parent) - the class being inherited from</li>
+				</ul>
+				To inherit from a class, use the <code>extends</code> keyword. <br><br>
+				For example, the <code>Car</code> class (subclass) inherits the attributes and methods from the <code>Vehicle</code> class (superclass).<br><br>
+				If you don't want other class to inherit from a class, use the <code>final</code> keyword:
+			</p>
+		</section>
+
+		<section class="main-section" id="Polymorphism">
+			<header>
+				Polymorphism
+			</header>
+			<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance. <br><br>
+			Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways. <br><br>
+			For example, think of a superclass called <code>Animal</code> that has a method called <code>animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Bird - And they also have their own implementation of an animal sound (the pig oinks and the cat meows, etc.). <br><br>
+
+			</p>
+		</section>
+
+		<section class="main-section" id="Abstraction">
+			<header>
+				Abstraction
+			</header>
+			<p>
+				Data <strong>abstraction</strong> is the process of hiding certain details and showing only essential information to the user. <br>
+				Abstraction can be achieved with either <strong>abstract class</strong> or <strong><u>interfaces</u></strong>. <br><br>
+				The <code>abstract</code> keyword is a non-access modifier, used for classes and methods:
+				<ul>
+					<li><strong>Abstract class:</strong> is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+					<li><strong>Abstract method:</strong> can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li>
+				</ul>
+				An abstract class can have both abstract and regular methods.
+			</p>
+		</section>
+
+		<section class="main-section" id="Encapsulation">
+			<header>
+				Encapsulation
+			</header>
+			<p>
+				The meaning of <strong>Encapsulation,</strong> is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+				<ul>
+					<li>declare class variables/ attributes as <code>private</code></li>
+					<li>provide public <strong>get</strong> and <strong>set</strong> methods and update the value of a <code>private</code> variable</li>
+				</ul>
+				Variables from an outside class can only be accessed if you provide a public <strong>get</strong> and <strong>set</strong> methods. <br><br>
+				The <code>get</code> method returns the variable value, and the <code>set</code> method sets the value. <br><br>
+				Syntax for both is that they start with either <code>get</code> or <code>set</code>, followed by the name of the variable, with the first letter in upper case.
+			</p>
+		</section>
+
+		<section class="main-section" id="Other_Terms">
+			<header>
+				Other Terms
+			</header>
+			<strong class="header1">Coupling</strong>
+			<p>Coupling refers to the knowledge or information or dependency of another class. It arises when classes are aware of each other. If a class has the details information of another class, there is strong coupling. In Java, we use private, protected, and public modifiers to display the visibility level of a class, method, and field. You can use interfaces for the weaker coupling because there is no concrete implementation.</p>
+			<strong class="header1">Cohesion</strong>
+			<p>Cohesion refers to the level of a component which performs a single well-defined task. A single well-defined task is done by a highly cohesive method. The weakly cohesive method will split the task into separate parts. The java.io package is a highly cohesive package because it has I/O related classes and interface. However, the java.util package is a weakly cohesive package because it has unrelated classes and interfaces.</p>
+			<strong class="header1">Association</strong>
+			<p>Association represents the relationship between the objects. Here, one object can be associated with one object or many objects. There can be four types of association between the objects:
+				<ul>
+					<li>One to One</li>
+					<li>One to Many</li>
+					<li>Many to One, and</li>
+					<li>Many to Many</li>
+				</ul>
+			Let's understand the relationship with real-time examples. For example, One country can have one prime minister (one to one), and a prime minister can have many ministers (one to many). Also, many MP's can have one prime minister (many to one), and many ministers can have many departments (many to many). <br><br>
+			Association can be undirectional or bidirectional.
+			</p>
+			<strong class="header1">Composition</strong>
+			<p>
+				The composition is also a way to achieve Association. The composition represents the relationship where one object contains other objects as a part of its state. There is a strong relationship between the containing object and the dependent object. It is the state where containing objects do not have an independent existence. If you delete the parent object, all the child objects will be deleted automatically.
+			</p>
+		</section>
+
+		<section class="main-section" id="References">
+			<header>References</header>
+			<p>All the documentation from this page was taken from other websites. Read the more complete versions from the following websites:
+				<ul>
+					<li><a href="https://www.javatpoint.com/java-tutorial">https://www.javatpoint.com/java-tutorial</a></li>
+					<li><a href="https://www.w3schools.com/java/">https://www.w3schools.com/java/</a></li>
+				</ul>
+			</p>
+		</section>
+	</main>
+
+</body>
+</html>
+<!--Objective: Build a website that is functionally similar to this: https://codepen.io/freeCodeCamp/full/NdrKKL (Links to an external site.).
+
+Fulfill the below user stories (Links to an external site.) and get all of the tests to pass. Give it your own personal style.
+
+You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
+
+User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
+
+User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+
+User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
+
+User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").
+
+User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+
+User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+
+User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+
+User Story #8: I can see a nav element with a corresponding id="navbar".
+
+User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+
+User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+
+User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+
+User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+
+User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
+
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+
+User Story #15: My Technical Documentation page should use at least one media query.-->
